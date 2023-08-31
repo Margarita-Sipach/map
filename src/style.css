@@ -90,6 +90,6 @@ body, #app{
 	background: #3878ee;
 }
 
-.active.button_green, button_green:hover{
+.active.button_green, .button_green:hover{
 	background: #6ABF4B;
 }
