@@ -15,11 +15,16 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 li{list-style-type: none;}
 
-#app{
+body, #app{
 	width: 100vw;
 	height: 100vh;
-	background: no-repeat url('./img/main.jpg') center;
 	overflow: hidden;
+	
+}
+
+#app{
+	position: relative;
+	background: no-repeat url('./img/main.jpg') center;
 }
 
 .button{
@@ -54,6 +59,7 @@ li{list-style-type: none;}
 
 .button__text{
 	display: none;
+	white-space: nowrap;
 }
 
 /* Active */
