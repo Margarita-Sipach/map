@@ -87,18 +87,18 @@ body, #app{
 
 /* Common */
 
-.button_blue > *{
+.button_blue > .button__sign{
 	background: #3878eeb3;
 }
 
-.active.button_blue > *, .button_blue:hover > *{
+.active.button_blue, .button_blue:hover{
 	background: #3878ee;
 }
 
-.button_green > *{
+.button_green > .button__sign{
 	background: #6ABF4Bb3
 }
 
-.active.button_green > *, .button_green:hover > *{
+.active.button_green, .button_green:hover{
 	background: #6ABF4B;
 }
