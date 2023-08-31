@@ -16,10 +16,10 @@ const closeButtons = () => {
 const onClick = (e) => {
 	const target = e.target;
 	const button = target.closest(".button");
-	const isActive = button.classList.contains("active");
+	const isActive = button?.classList.contains("active");
 
 	closeButtons();
-	isActive ? button.classList.remove("active") : button.classList.add("active");
+	isActive !== undefined && (isActive ? button.classList.remove("active") : button.classList.add("active"));
 }
 
 generateAllButtons()
