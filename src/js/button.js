@@ -30,7 +30,7 @@ export const generateButtonWrapper = () => {
 	const {getScreenX, getScreenY} = generateButtonHelpers();
 
 	return ({text, imageX, imageY, color = 'blue'}) => (
-		`<button class="button button_${color} active" style="left: ${getScreenX(imageX)}px; top: ${getScreenY(imageY)}px">
+		`<button class="button button_${color}" style="left: ${getScreenX(imageX)}px; top: ${getScreenY(imageY)}px">
 			<span class="button__sign"></span>
 			<span class="button__text">${text}</span>
 		</button>`
