@@ -1,5 +1,5 @@
 *{padding: 0;margin: 0;border: 0;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;transition: .2s all;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;transition: .4s all;}
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
@@ -34,23 +34,24 @@ body, #app{
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	border-radius: 40px;
-
-	padding: 0 15px;
-	width: 41px;
-	height: 41px;
-
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 15px;
-
 	position: absolute;
+	background: none;
+}
+
+.button__sign, .button__text{
+	height: 41px;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	border-radius: 40px;
 }
 
 .button__sign{
-	position: relative;
 	font-size: 20px;
+	width: 41px;
+	z-index: 2;
 }
 
 .button__sign:after{
@@ -58,8 +59,11 @@ body, #app{
 }
 
 .button__text{
-	display: none;
-	white-space: nowrap;
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	white-space: nowrap;	
+	padding-left: 41px;
 }
 
 /* Active */
@@ -68,28 +72,33 @@ body, #app{
 	width: auto;
 }
 
+.active > .button__sign{
+	background: none;
+}
+
 .active > .button__sign:after{
 	content: "−";
 }
 
 .active > .button__text{
-	display: block;
+	opacity: 1;
+	visibility: visible;
 }
 
 /* Common */
 
-.button_blue, .active.button_blue:hover{
+.button_blue > *{
 	background: #3878eeb3;
 }
 
-.button_green, .active.button_green:hover{
-	background: #6ABF4Bb3;
-}
-
-.active.button_blue, .button_blue:hover{
+.active.button_blue > *, .button_blue:hover > *{
 	background: #3878ee;
 }
 
-.active.button_green, .button_green:hover{
+.button_green > *{
+	background: #6ABF4Bb3
+}
+
+.active.button_green > *, .button_green:hover > *{
 	background: #6ABF4B;
 }
